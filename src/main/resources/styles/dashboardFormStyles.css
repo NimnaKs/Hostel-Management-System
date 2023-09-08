@@ -1,0 +1,16 @@
+#dashboardAnchorPane{
+    -fx-background-color : #ececec;
+    -fx-background-radius: 0 50px 50px 0;
+}
+
+#hostal_lbl{
+    -fx-border-color : purple;
+}
+
+.chart-bar {
+    -fx-bar-fill: #1e56a0;
+}
+
+.chart-content {
+    -fx-background-color:  #8dc6ff;
+}

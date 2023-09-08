@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="366.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.loadingFormController">
+   <children>
+      <ImageView fitHeight="223.0" fitWidth="492.0" layoutX="1.0" layoutY="-1.0">
+         <image>
+            <Image url="@../assets/uoc-logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="230.0" prefHeight="50.0" prefWidth="439.0" style="-fx-background-color: #f4d6d2; -fx-background-radius: 5; -fx-alignment: center;" text="D24 Hostel Management System " textFill="#823a33">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="333.0" text="Loading...">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="33.0" layoutY="296.0" prefHeight="26.0" prefWidth="439.0" progress="0.0" stylesheets="@../styles/loadingFormStyles.css" />
+   </children>
+</AnchorPane>

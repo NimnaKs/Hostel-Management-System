@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" focusTraversable="true" prefHeight="700.0" prefWidth="928.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenantsFormController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="28.0" prefHeight="80.0" prefWidth="903.0" style="-fx-background-color: #ececec; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="611.0" layoutY="10.0">
+               <image>
+                  <Image url="@../assets/man.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="65.0" layoutY="10.0" prefHeight="63.0" prefWidth="166.0" style="-fx-background-radius: 5; -fx-background-color: #ececec; -fx-alignment: center;" stylesheets="@../styles/dashboardFormStyles.css" text="Tenants" textFill="#15161fcb">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="60.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="682.0" layoutY="8.0" prefHeight="63.0" prefWidth="201.0" style="-fx-background-radius: 5; -fx-background-color: #ececec;" stylesheets="@../styles/dashboardFormStyles.css" text="Nimna Kaveesha">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="23.0" layoutY="42.0">
+         <image>
+            <Image url="@../assets/student.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="22.0" layoutY="126.0" prefHeight="276.0" prefWidth="890.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
+         <styleClass>
+            <String fx:value="chart-bar" />
+            <String fx:value="chart-content" />
+         </styleClass>
+         <children>
+            <TextField fx:id="txtSearch11" layoutX="246.0" layoutY="91.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtSearch111" layoutX="571.0" layoutY="91.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="0768539902" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" text="0768539902">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="573.0" layoutY="67.0" prefHeight="20.0" prefWidth="98.0" text="Contact">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXDatePicker id="datepicker" defaultColor="#5585b5" layoutX="339.0" layoutY="165.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-radius: 8;" styleClass="datepicker" stylesheets="@../styles/tenantsFormStyle.css" />
+            <ComboBox id="gender_combobox" layoutX="664.0" layoutY="165.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: white;" styleClass="gender_combobox" stylesheets="@../styles/tenantsFormStyle.css" />
+            <Label layoutX="665.0" layoutY="143.0" prefHeight="20.0" prefWidth="98.0" text="Gender">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="11.0" layoutY="235.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="481.0" layoutY="235.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Save" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtSearch112" layoutX="15.0" layoutY="165.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="Kalutara" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" text="Kalutara">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField id="search_txtField" fx:id="txtSearch" layoutX="16.0" layoutY="15.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="374.0" promptText="Search Tenant Id" styleClass="search_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#02a8c4" />
+               </effect>
+            </TextField>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="389.0" layoutY="12.0" onAction="#btnSearchOnAction" prefHeight="42.5" prefWidth="65.0" style="-fx-background-color: #5585b5;" text="." textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#b51313" />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="407.0" layoutY="17.0">
+               <image>
+                  <Image url="@../../../../../../Downloads/HenHouse%202%20(2)/HenHouse%202/HenHouse/HenHouse/src/main/resources/image/search.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtSearch1" layoutX="17.0" layoutY="90.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="200.0" promptText="T001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="18.0" layoutY="68.0" prefHeight="20.0" prefWidth="81.0" text="Id">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="68.0" prefHeight="20.0" prefWidth="98.0" text="Name">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="143.0" prefHeight="20.0" prefWidth="98.0" text="Address">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="340.0" layoutY="141.0" prefHeight="20.0" prefWidth="98.0" text="Date of Birth">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblCustomer" layoutX="20.0" layoutY="430.0" prefHeight="250.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
+         <columns>
+            <TableColumn fx:id="colCustomerId" prefWidth="131.55103588104248" text="Id" />
+            <TableColumn fx:id="colCustomerName" prefWidth="205.1021728515625" text="Name" />
+            <TableColumn fx:id="colTelephone" prefWidth="179.89785766601562" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="194.13311767578125" text="Address" />
+            <TableColumn fx:id="colGmail" prefWidth="176.8668212890625" text="Date Of Birth" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>

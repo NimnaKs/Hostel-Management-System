@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="559.0" prefWidth="300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OtpFormController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: #171821;">
+         <children>
+            <Label fx:id="title_bar" layoutX="118.0" layoutY="3.0" prefHeight="25.0" prefWidth="264.0" text="D24 Hostel Management System - OTP Form" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="473.0" layoutY="3.0" onMouseClicked="#onMouseClick">
+               <image>
+                  <Image url="@../assets/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="223.0" fitWidth="492.0" layoutX="1.0" layoutY="28.0">
+         <image>
+            <Image url="@../assets/uoc-logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="252.0" prefHeight="50.0" prefWidth="439.0" style="-fx-background-color: #f4d6d2; -fx-background-radius: 5; -fx-alignment: center;" text="D24 Hostel Management System " textFill="#823a33">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="464.25091552734375" endY="536.0" layoutX="2.0" opacity="0.46" startX="26.966720581054688" startY="536.0" />
+      <JFXButton buttonType="RAISED" layoutX="35.0" layoutY="465.0" onAction="#onActionOtpConfirm" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #0e589c;" text="OTP Confirm" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="269.0" layoutY="464.0" onAction="#onActionBack" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #171821;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="33.0" layoutY="303.0" prefHeight="50.0" prefWidth="439.0" style="-fx-background-radius: 5; -fx-alignment: center;" text="Waiting for OTP" textFill="#171821">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="347.0" prefHeight="50.0" prefWidth="439.0" style="-fx-background-radius: 5; -fx-alignment: center;" text="Plz enter OTP code send to Your email" textFill="#171821">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="otptxt" layoutX="36.0" layoutY="405.0" prefHeight="38.0" prefWidth="432.0" promptText="OTP Code Here" stylesheets="@../styles/loginFormStyles.css">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="36.0" layoutY="509.0" onMouseClicked="#onActionResendOTP" prefHeight="17.0" prefWidth="148.0" style="-fx-background-color: white;" text="Resend OTP" textFill="#0e589c">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

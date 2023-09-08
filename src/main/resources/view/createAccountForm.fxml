@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="559.0" prefWidth="300.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.createAccountFormController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="30.0" prefWidth="500.0" style="-fx-background-color: #171821;">
+         <children>
+            <Label fx:id="title_bar" layoutX="84.0" layoutY="3.0" prefHeight="25.0" prefWidth="320.0" text="D24 Hostel Management System - Create Account Form" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="473.0" layoutY="3.0" onMouseClicked="#onMouseClick">
+               <image>
+                  <Image url="@../assets/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="223.0" fitWidth="492.0" layoutX="1.0" layoutY="28.0">
+         <image>
+            <Image url="@../assets/uoc-logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="33.0" layoutY="252.0" prefHeight="50.0" prefWidth="439.0" style="-fx-background-color: #f4d6d2; -fx-background-radius: 5; -fx-alignment: center;" text="D24 Hostel Management System " textFill="#823a33">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" layoutX="33.0" layoutY="324.0" prefHeight="38.0" prefWidth="439.0" promptText="Username Here" stylesheets="@../styles/loginFormStyles.css">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" layoutX="32.0" layoutY="381.0" prefHeight="38.0" prefWidth="439.0" promptText="Password Here" stylesheets="@../styles/loginFormStyles.css">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Line endX="464.25091552734375" endY="536.0" layoutX="2.0" opacity="0.46" startX="26.966720581054688" startY="536.0" />
+      <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="491.0" onAction="#onActionSave" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #0e589c;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="270.0" layoutY="491.0" onAction="#onActionBack" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #171821;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="reEnterPasswordAgain" layoutX="31.0" layoutY="439.0" prefHeight="38.0" prefWidth="439.0" promptText="Enter Password Again" stylesheets="@../styles/loginFormStyles.css">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+.progress-bar {
+    -fx-accent: #3498db; /* Color of the progress bar */
+    -fx-background-color: #f2f2f2; /* Background color of the progress bar */
+}
+
+/* You can customize the appearance of the progress bar track and bar using these sub-controls */
+.progress-bar .track {
+    -fx-background-color: #e0e0e0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #3498db;
+}

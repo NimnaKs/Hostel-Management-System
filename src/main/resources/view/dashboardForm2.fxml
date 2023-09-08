@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="28.0" prefHeight="80.0" prefWidth="903.0" style="-fx-background-color: #ececec; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="611.0" layoutY="10.0">
+               <image>
+                  <Image url="@../assets/man.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="11.0" prefHeight="63.0" prefWidth="243.0" style="-fx-background-radius: 5; -fx-background-color: #ececec; -fx-alignment: center;" stylesheets="@../styles/dashboardFormStyles.css" text="Dashboard" textFill="#15161fcb">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="60.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="682.0" layoutY="8.0" prefHeight="63.0" prefWidth="201.0" style="-fx-background-radius: 5; -fx-background-color: #ececec;" stylesheets="@../styles/dashboardFormStyles.css" text="Nimna Kaveesha">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="16.0" layoutY="21.0">
+               <image>
+                  <Image url="@../assets/dashboard.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="24.0" layoutY="126.0" prefHeight="150.0" prefWidth="210.0" style="-fx-background-color: #bbe4e9; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="11.0" layoutY="49.0">
+               <image>
+                  <Image url="@../assets/bed.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="4.0" layoutY="8.0" prefHeight="45.0" prefWidth="201.0" style="-fx-alignment: center;" text="Total Rooms" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="244.0" layoutY="126.0" prefHeight="150.0" prefWidth="210.0" style="-fx-background-color: #79c2d0; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="11.0" layoutY="49.0">
+               <image>
+                  <Image url="@../assets/available.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="4.0" layoutY="8.0" prefHeight="45.0" prefWidth="201.0" style="-fx-alignment: center;" text="Available Rooms" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="465.0" layoutY="126.0" prefHeight="150.0" prefWidth="210.0" style="-fx-background-color: #53a8b6; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="20.0" layoutY="49.0">
+               <image>
+                  <Image url="@../assets/tenant.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="4.0" layoutY="8.0" prefHeight="45.0" prefWidth="201.0" style="-fx-alignment: center;" text="Total Tenants" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="689.0" layoutY="126.0" prefHeight="150.0" prefWidth="210.0" style="-fx-background-color: #5585b5; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="11.0" layoutY="49.0">
+               <image>
+                  <Image url="@../assets/salary.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="4.0" layoutY="8.0" prefHeight="45.0" prefWidth="201.0" style="-fx-alignment: center;" text="Total Income" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="297.0" prefHeight="384.0" prefWidth="518.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
+         <children>
+            <BarChart fx:id="barChart" alternativeRowFillVisible="false" barGap="2.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="17.0" layoutY="60.0" legendVisible="false" prefHeight="304.0" prefWidth="500.0" style="-fx-background-color: #8dc6ff; -fx-background-radius: 10; -fx-region-background: #8dc6ff; -fx-border-radius: 10;" styleClass="chart-content" stylesheets="@../styles/dashboardFormStyles.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM">
+                     <tickLabelFont>
+                        <Font name="Arial Bold" size="10.0" />
+                     </tickLabelFont>
+                  </CategoryAxis>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT">
+                     <tickLabelFont>
+                        <Font name="Arial Bold" size="10.0" />
+                     </tickLabelFont>
+                  </NumberAxis>
+               </yAxis>
+            </BarChart>
+            <Label layoutX="115.0" layoutY="12.0" prefHeight="48.0" prefWidth="242.0" style="-fx-alignment: center;" text="Income of the year" textFill="#1e56a0">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="348.0" layoutY="12.0">
+               <image>
+                  <Image url="@../assets/financial-statement.png" />
+               </image>
+            </ImageView>
+         </children>
+         <styleClass>
+            <String fx:value="chart-bar" />
+            <String fx:value="chart-content" />
+         </styleClass>
+      </AnchorPane>
+      <AnchorPane layoutX="558.0" layoutY="297.0" prefHeight="384.0" prefWidth="340.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
+         <styleClass>
+            <String fx:value="chart-bar" />
+            <String fx:value="chart-content" />
+         </styleClass>
+         <children>
+            <AnchorPane layoutX="20.0" layoutY="134.0" prefHeight="230.0" prefWidth="310.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #5585b5; -fx-border-width: 5; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <children>
+                  <Label id="hostal_lbl" contentDisplay="BOTTOM" layoutX="145.0" layoutY="151.0" prefHeight="63.0" prefWidth="112.0" style="-fx-background-radius: 5; -fx-background-color: white; -fx-alignment: center;" stylesheets="@../styles/dashboardFormStyles.css" text="Hostal" textFill="#410089">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label contentDisplay="BOTTOM" layoutX="48.0" layoutY="146.0" prefHeight="74.0" prefWidth="95.0" style="-fx-background-radius: 5; -fx-background-color: white; -fx-alignment: center;" text="D24" textFill="#410089">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="58.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="138.0" fitWidth="300.0" layoutX="5.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../assets/uoc-logo-removebg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" graphicTextGap="9.0" layoutX="17.0" layoutY="15.0" prefHeight="106.0" prefWidth="314.0" style="-fx-background-radius: 10; -fx-background-color: #22267b;" textFill="WHITE">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="42.0" layoutY="34.0">
+               <image>
+                  <Image url="@../assets/hourglass.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="23.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="02:03:45" textFill="#f2f4f7b2">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="68.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="2023-08-29" textFill="#f2f4f7b2">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
