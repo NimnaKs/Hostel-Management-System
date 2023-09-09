@@ -118,4 +118,20 @@ public class RoomBOImpl implements RoomBO {
         }
         throw new RuntimeException("Room not found!");
     }
+
+    @Override
+    public String getRoomQty() {
+        Session session = FactoryConfiguration.getFactoryConfiguration().getSession();
+        Transaction transaction = session.getTransaction();
+        Integer count;
+        try (session) {
+            transaction.begin();
+            count=roomDAO.getRoomCount(session);
+            transaction.commit();
+        } catch (RuntimeException exception) {
+            transaction.rollback();
+            throw new RuntimeException(exception);
+        }
+        return String.valueOf(count);
+    }
 }

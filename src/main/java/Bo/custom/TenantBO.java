@@ -17,4 +17,6 @@ public interface TenantBO extends SuperBO{
     void deleteTenant(String studentId);
 
     TenantDto viewTenant(TenantDto tenantDto);
+
+    String getTenantsCount();
 }

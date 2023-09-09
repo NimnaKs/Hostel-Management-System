@@ -48,7 +48,7 @@
                   <Font name="Apple LiGothic Medium" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+            <Label fx:id="totalRooms" layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
                <font>
                   <Font name="Apple LiGothic Medium" size="50.0" />
                </font>
@@ -67,7 +67,7 @@
                   <Font name="Apple LiGothic Medium" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+            <Label fx:id="availableRooms" layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
                <font>
                   <Font name="Apple LiGothic Medium" size="50.0" />
                </font>
@@ -86,7 +86,7 @@
                   <Font name="Apple LiGothic Medium" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+            <Label fx:id="totalTenants" layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
                <font>
                   <Font name="Apple LiGothic Medium" size="50.0" />
                </font>
@@ -105,7 +105,7 @@
                   <Font name="Apple LiGothic Medium" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
+            <Label fx:id="totalIncome" layoutX="111.0" layoutY="60.0" prefHeight="75.0" prefWidth="90.0" style="-fx-alignment: center;" text="100" textFill="#171821">
                <font>
                   <Font name="Apple LiGothic Medium" size="50.0" />
                </font>
@@ -181,12 +181,12 @@
                   <Image url="@../assets/hourglass.png" />
                </image>
             </ImageView>
-            <Label layoutX="97.0" layoutY="23.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="02:03:45" textFill="#f2f4f7b2">
+            <Label fx:id="time" layoutX="97.0" layoutY="23.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="02:03:45" textFill="#f2f4f7b2">
                <font>
                   <Font name="Apple LiGothic Medium" size="50.0" />
                </font>
             </Label>
-            <Label layoutX="96.0" layoutY="68.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="2023-08-29" textFill="#f2f4f7b2">
+            <Label fx:id="date" layoutX="96.0" layoutY="68.0" prefHeight="52.0" prefWidth="224.0" style="-fx-alignment: center;" text="2023-08-29" textFill="#f2f4f7b2">
                <font>
                   <Font name="Apple LiGothic Medium" size="30.0" />
                </font>

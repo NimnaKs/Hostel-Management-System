@@ -54,4 +54,12 @@ public class TenantDAOImpl implements TenantDAO {
     public Tenant search(String id, Session session) throws SQLException, ClassNotFoundException {
         return session.get(Tenant.class, id);
     }
+
+    @Override
+    public Integer getRoomCount(Session session) {
+        String hql = "SELECT COUNT(id) FROM Tenant ";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        Long count = query.uniqueResult();
+        return Math.toIntExact(count);
+    }
 }

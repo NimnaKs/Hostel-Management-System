@@ -2,9 +2,7 @@ package Dao.custom.impl;
 
 import Dao.custom.ReservationDAO;
 import entity.Reservation;
-import entity.Tenant;
 import org.hibernate.Session;
-import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
 import java.sql.SQLException;
@@ -64,5 +62,21 @@ public class ReservationDAOImpl implements ReservationDAO {
         query.setParameter("roomId", roomTypeId);
         Long count = query.uniqueResult();
         return Math.toIntExact(count);
+    }
+
+    @Override
+    public Integer getRoomCount(Session session) {
+        String hql = "SELECT COUNT(res_id) FROM Reservation ";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        Long count = query.uniqueResult();
+        return Math.toIntExact(count);
+    }
+
+    @Override
+    public Long getIncomeCount(Session session) {
+        String hql = "SELECT SUM(room.key_money) FROM Reservation ";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        Long count = query.uniqueResult();
+        return count;
     }
 }

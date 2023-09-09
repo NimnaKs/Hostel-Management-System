@@ -113,4 +113,20 @@ public class TenantsBOImpl implements TenantBO {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public String getTenantsCount() {
+        Session session = FactoryConfiguration.getFactoryConfiguration().getSession();
+        Transaction transaction = session.getTransaction();
+        Integer count;
+        try (session) {
+            transaction.begin();
+            count=tenantDAO.getRoomCount(session);
+            transaction.commit();
+        } catch (RuntimeException exception) {
+            transaction.rollback();
+            throw new RuntimeException(exception);
+        }
+        return String.valueOf(count);
+    }
 }

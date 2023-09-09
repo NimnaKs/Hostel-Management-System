@@ -63,4 +63,12 @@ public class RoomDAOImpl implements RoomDAO {
             return session.get(Room.class, id);
         }
     }
+
+    @Override
+    public Integer getRoomCount(Session session) {
+        String hql = "SELECT COUNT(qty) FROM Room";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        Long count = query.uniqueResult();
+        return Math.toIntExact(count);
+    }
 }

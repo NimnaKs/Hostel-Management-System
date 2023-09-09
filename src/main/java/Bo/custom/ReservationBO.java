@@ -19,4 +19,8 @@ public interface ReservationBO extends SuperBO {
     List<ReservationDto> getAll();
 
     void updateReservation(ReservationDto reservation);
+
+    String getUnfreeRooms();
+
+    String getIncome();
 }

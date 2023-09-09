@@ -17,4 +17,6 @@ public interface RoomBO extends SuperBO {
     List<RoomDto> getAllRooms();
 
     RoomDto viewRoom(String text);
+
+    String getRoomQty();
 }
