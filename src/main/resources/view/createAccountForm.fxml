@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -40,11 +41,6 @@
             <Font name="Arial Bold" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="password" layoutX="32.0" layoutY="381.0" prefHeight="38.0" prefWidth="439.0" promptText="Password Here" stylesheets="@../styles/loginFormStyles.css">
-         <font>
-            <Font name="Arial Bold" size="14.0" />
-         </font>
-      </TextField>
       <Line endX="464.25091552734375" endY="536.0" layoutX="2.0" opacity="0.46" startX="26.966720581054688" startY="536.0" />
       <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="491.0" onAction="#onActionSave" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #0e589c;" text="Save" textFill="WHITE">
          <font>
@@ -56,10 +52,15 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="reEnterPasswordAgain" layoutX="31.0" layoutY="439.0" prefHeight="38.0" prefWidth="439.0" promptText="Enter Password Again" stylesheets="@../styles/loginFormStyles.css">
+      <PasswordField fx:id="password" layoutX="32.0" layoutY="381.0" prefHeight="38.0" prefWidth="439.0" promptText="Password Here" stylesheets="@../styles/loginFormStyles.css">
          <font>
             <Font name="Arial Bold" size="14.0" />
          </font>
-      </TextField>
+      </PasswordField>
+      <PasswordField fx:id="reEnterPasswordAgain" layoutX="31.0" layoutY="439.0" prefHeight="38.0" prefWidth="439.0" promptText="Re Enter Password Here" stylesheets="@../styles/loginFormStyles.css">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </PasswordField>
    </children>
 </AnchorPane>

@@ -2,6 +2,8 @@ package Dao;
 
 import Dao.custom.impl.RoomDAOImpl;
 import Dao.custom.impl.TenantDAOImpl;
+import Dao.custom.impl.UserDAOImpl;
+
 public class DAOFactory {
     private static DAOFactory daoFactory;
     private DAOFactory() {
@@ -10,7 +12,7 @@ public class DAOFactory {
         return (daoFactory == null) ? daoFactory = new DAOFactory() : daoFactory;
     }
     public enum DAOTypes {
-        TENANT,ROOM
+        TENANT,ROOM,USER
     }
     public SuperDAO getDAO(DAOTypes types){
         switch (types) {
@@ -18,6 +20,8 @@ public class DAOFactory {
                 return new TenantDAOImpl();
             case ROOM:
                 return new RoomDAOImpl();
+            case USER:
+                return new UserDAOImpl();
             default:
                 return null;
         }

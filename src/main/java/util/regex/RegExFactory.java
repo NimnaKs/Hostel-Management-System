@@ -50,6 +50,8 @@ public class RegExFactory {
                 return roomPattern;
             case INTEGER:
                 return integerPattern;
+            case EMAIL:
+                return emailPattern;
             default:
                 throw new RuntimeException("Pattern not found");
         }

@@ -39,12 +39,12 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="110.0" layoutY="91.0" onMouseClicked="#onClickedChangeDp">
+      <ImageView fx:id="profileImg" fitHeight="85.0" fitWidth="85.0" layoutX="110.0" layoutY="91.0" onMouseClicked="#onClickedChangeDp">
          <image>
             <Image url="@../assets/add-user.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtName" layoutX="16.0" layoutY="191.0" prefHeight="40.0" prefWidth="274.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+      <TextField fx:id="txtName" layoutX="16.0" layoutY="191.0" prefHeight="40.0" prefWidth="274.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="263.0" prefHeight="40.0" prefWidth="274.0" promptText="nimnaKaveesha123456@gmail.com" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="263.0" prefHeight="40.0" prefWidth="274.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -64,7 +64,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="15.0" layoutY="334.0" prefHeight="40.0" prefWidth="274.0" promptText="NimnaKs2001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+      <TextField fx:id="txtUserName" layoutX="15.0" layoutY="334.0" prefHeight="40.0" prefWidth="274.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
@@ -74,7 +74,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password" layoutX="14.0" layoutY="404.0" prefHeight="40.0" prefWidth="274.0" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" />
+      <PasswordField fx:id="txtPassword" layoutX="14.0" layoutY="404.0" prefHeight="40.0" prefWidth="274.0" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" />
       <Label layoutX="15.0" layoutY="382.0" prefHeight="20.0" prefWidth="98.0" text="Password">
          <font>
             <Font name="Arial Bold" size="15.0" />

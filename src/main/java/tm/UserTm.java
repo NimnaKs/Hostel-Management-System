@@ -13,5 +13,4 @@ import lombok.ToString;
 public class UserTm {
     private String id;
     private String password;
-    private String passwordHint;
 }
