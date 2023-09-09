@@ -12,10 +12,6 @@ public class RegExFactory {
     private final Pattern mobilePattern;
     private final Pattern doublePattern;
     private final Pattern passwordPattern;
-    private Pattern idPattern;
-    private Pattern addressPattern;
-    private Pattern postalCodePattern;
-    private Pattern oldIDPattern;
     private final Pattern roomPattern;
     private final Pattern integerPattern;
 
@@ -30,10 +26,6 @@ public class RegExFactory {
         passwordPattern = Pattern.compile("^[a-zA-Z0-9_.-]{4,}$");
         roomPattern = Pattern.compile("^[R][M][-][0-9]{1,}$");
         integerPattern = Pattern.compile("^\\d+$");
-        /*        idPattern = Pattern.compile("^([0-9]{9}[x|X|v|V]|[0-9]{12})$");
-        addressPattern = Pattern.compile("^[A-Za-z0-9'\\/\\.\\,]{5,}$");
-        postalCodePattern = Pattern.compile("^\\d{5}$");
-        oldIDPattern = Pattern.compile("^[0-9]{9}[vVxX]$");*/
     }
 
     public static RegExFactory getInstance() {

@@ -1,6 +1,8 @@
 package Bo.util;
 
+import dto.RoomDto;
 import dto.TenantDto;
+import entity.Room;
 import entity.Tenant;
 
 public class Converter {
@@ -44,7 +46,7 @@ public class Converter {
         return tenant;
     }
 
-    /*public RoomDto toRoomDto(Room entity) {
+    public RoomDto toRoomDto(Room entity) {
         RoomDto dto = new RoomDto();
         dto.setRoom_type_id(entity.getRoom_type_id());
         dto.setType(entity.getType());
@@ -62,7 +64,7 @@ public class Converter {
         return entity;
     }
 
-    public Reservation toReservationEntity(ReservationDto dto) {
+    /*public Reservation toReservationEntity(ReservationDto dto) {
         System.out.println(dto);
         Reservation entity = new Reservation();
         entity.setRes_id(dto.getRes_id());

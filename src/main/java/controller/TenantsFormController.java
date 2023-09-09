@@ -106,7 +106,7 @@ public class TenantsFormController implements Initializable {
     @FXML
     void onActionDelete(ActionEvent event) {
         try {
-            if (!txtId.equals(tenantBO.getLastId())) {
+            if (!txtId.getText().equals(tenantBO.getLastId()) || txtId.getText()!=null) {
                 tenantBO.deleteTenant(txtId.getText());
                 new Alert(Alert.AlertType.INFORMATION, "Student Deleted").show();
                 refreshTable();
