@@ -26,7 +26,7 @@
       </AnchorPane>
       <AnchorPane id="dashboardAnchorPane" layoutY="30.0" prefHeight="700.0" prefWidth="350.0" stylesheets="@../styles/dashboardFormStyles.css">
          <children>
-            <JFXButton fx:id="dashboard" alignment="CENTER" graphicTextGap="29.0" layoutX="28.0" layoutY="180.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Dashboard" textFill="#171821">
+            <JFXButton fx:id="dashboardBtn" alignment="CENTER" graphicTextGap="29.0" layoutX="28.0" layoutY="180.0" onAction="#onActionClickDashBoard" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Dashboard" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -64,7 +64,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <JFXButton fx:id="dashboard1" alignment="CENTER" graphicTextGap="73.0" layoutX="28.0" layoutY="245.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Rooms" textFill="#171821">
+            <JFXButton fx:id="roomsBtn" alignment="CENTER" graphicTextGap="73.0" layoutX="28.0" layoutY="245.0" onAction="#onActionClickRoom" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Rooms" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -79,7 +79,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="dashboard11" alignment="CENTER" graphicTextGap="63.0" layoutX="28.0" layoutY="310.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Tenants" textFill="#171821">
+            <JFXButton fx:id="tenantsBtn" alignment="CENTER" graphicTextGap="63.0" layoutX="28.0" layoutY="310.0" onAction="#onActionClickTenants" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Tenants" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -94,7 +94,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="dashboard111" alignment="CENTER" graphicTextGap="32.0" layoutX="28.0" layoutY="375.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Reservation" textFill="#171821">
+            <JFXButton fx:id="reservationBtn" alignment="CENTER" graphicTextGap="32.0" layoutX="28.0" layoutY="375.0" onAction="#onActionReservation" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Reservation" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -109,7 +109,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="dashboard1111" alignment="CENTER" graphicTextGap="27.0" layoutX="28.0" layoutY="440.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="User Details" textFill="#171821">
+            <JFXButton fx:id="userDetailsBtn" alignment="CENTER" graphicTextGap="27.0" layoutX="28.0" layoutY="440.0" onAction="#onActionUserDetails" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="User Details" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -124,7 +124,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="dashboard11111" alignment="CENTER" graphicTextGap="70.0" layoutX="28.0" layoutY="505.0" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Sign out" textFill="#171821">
+            <JFXButton fx:id="signOutBtn" alignment="CENTER" graphicTextGap="70.0" layoutX="28.0" layoutY="505.0" onAction="#onActionClickSignOut" prefHeight="65.0" prefWidth="293.0" ripplerFill="#0654e2" text="Sign out" textFill="#171821">
                <font>
                   <Font name="Arial Bold" size="25.0" />
                </font>
@@ -141,5 +141,6 @@
             </JFXButton>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="root1" layoutX="354.0" layoutY="31.0" prefHeight="700.0" prefWidth="926.0" />
    </children>
 </AnchorPane>

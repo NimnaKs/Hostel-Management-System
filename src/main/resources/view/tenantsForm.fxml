@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDatePicker?>
 <?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -41,18 +41,18 @@
             <Image url="@../assets/student.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="22.0" layoutY="126.0" prefHeight="276.0" prefWidth="890.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
+      <AnchorPane fx:id="root1" layoutX="22.0" layoutY="126.0" prefHeight="276.0" prefWidth="890.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
          <styleClass>
             <String fx:value="chart-bar" />
             <String fx:value="chart-content" />
          </styleClass>
          <children>
-            <TextField fx:id="txtSearch11" layoutX="246.0" layoutY="91.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField fx:id="txtName" layoutX="246.0" layoutY="91.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="txtSearch111" layoutX="571.0" layoutY="91.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="0768539902" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" text="0768539902">
+            <TextField fx:id="txtContact" layoutX="571.0" layoutY="91.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -62,24 +62,23 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <JFXDatePicker id="datepicker" defaultColor="#5585b5" layoutX="339.0" layoutY="165.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-radius: 8;" styleClass="datepicker" stylesheets="@../styles/tenantsFormStyle.css" />
-            <ComboBox id="gender_combobox" layoutX="664.0" layoutY="165.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: white;" styleClass="gender_combobox" stylesheets="@../styles/tenantsFormStyle.css" />
+            <ComboBox id="gender_combobox" fx:id="genderCombobox" layoutX="664.0" layoutY="165.0" prefHeight="40.0" prefWidth="206.0" style="-fx-background-color: white;" styleClass="gender_combobox" stylesheets="@../styles/tenantsFormStyle.css" />
             <Label layoutX="665.0" layoutY="143.0" prefHeight="20.0" prefWidth="98.0" text="Gender">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <JFXButton layoutX="11.0" layoutY="235.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
+            <JFXButton fx:id="deleteBtn" layoutX="11.0" layoutY="235.0" onAction="#onActionDelete" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="481.0" layoutY="235.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Save" textFill="#fcfcfc">
+            <JFXButton fx:id="saveBtn" layoutX="481.0" layoutY="235.0" onAction="#onActionSave" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Save" textFill="#fcfcfc">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </JFXButton>
-            <TextField fx:id="txtSearch112" layoutX="15.0" layoutY="165.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="300.0" promptText="Kalutara" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" text="Kalutara">
+            <TextField fx:id="txtAddress" layoutX="15.0" layoutY="165.0" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -105,10 +104,10 @@
             </JFXButton>
             <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="407.0" layoutY="17.0">
                <image>
-                  <Image url="@../../../../../../Downloads/HenHouse%202%20(2)/HenHouse%202/HenHouse/HenHouse/src/main/resources/image/search.png" />
+                  <Image url="@../assets/search.png" />
                </image>
             </ImageView>
-            <TextField fx:id="txtSearch1" layoutX="17.0" layoutY="90.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="200.0" promptText="T001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField fx:id="txtId" layoutX="17.0" layoutY="90.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -133,15 +132,16 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
+            <DatePicker fx:id="txtDOB" layoutX="340.0" layoutY="164.0" prefHeight="40.0" prefWidth="286.0" style="-fx-background-color: white; -fx-border-radius: 8;" styleClass="datepicker" stylesheets="@../styles/tenantsFormStyle.css" />
          </children>
       </AnchorPane>
-      <TableView fx:id="tblCustomer" layoutX="20.0" layoutY="430.0" prefHeight="250.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
+      <TableView fx:id="tblTenants" layoutX="20.0" layoutY="430.0" prefHeight="250.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
          <columns>
-            <TableColumn fx:id="colCustomerId" prefWidth="131.55103588104248" text="Id" />
-            <TableColumn fx:id="colCustomerName" prefWidth="205.1021728515625" text="Name" />
-            <TableColumn fx:id="colTelephone" prefWidth="179.89785766601562" text="Contact" />
+            <TableColumn fx:id="colTenantId" prefWidth="131.55103588104248" text="Id" />
+            <TableColumn fx:id="colTenantName" prefWidth="205.1021728515625" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="179.89785766601562" text="Contact" />
             <TableColumn fx:id="colAddress" prefWidth="194.13311767578125" text="Address" />
-            <TableColumn fx:id="colGmail" prefWidth="176.8668212890625" text="Date Of Birth" />
+            <TableColumn fx:id="colDob" prefWidth="176.8668212890625" text="Date Of Birth" />
          </columns>
          <styleClass>
             <String fx:value="table-cell" />

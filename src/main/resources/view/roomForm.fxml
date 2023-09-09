@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" focusTraversable="true" prefHeight="700.0" prefWidth="928.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TenantsFormController">
+<AnchorPane fx:id="root1" focusTraversable="true" prefHeight="700.0" prefWidth="928.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomController">
    <children>
       <AnchorPane layoutX="17.0" layoutY="28.0" prefHeight="80.0" prefWidth="903.0" style="-fx-background-color: #ececec; -fx-background-radius: 10;">
          <children>
@@ -45,7 +45,7 @@
             <String fx:value="chart-content" />
          </styleClass>
          <children>
-            <TextField fx:id="txtSearch11" layoutX="174.0" layoutY="90.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="264.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField fx:id="txtType" layoutX="174.0" layoutY="90.0" prefHeight="40.0" prefWidth="264.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -55,17 +55,17 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <JFXButton layoutX="11.0" layoutY="158.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
+            <JFXButton fx:id="deleteBtn" layoutX="11.0" layoutY="158.0" onAction="#onActionDelete" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="481.0" layoutY="155.0" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Save" textFill="#fcfcfc">
+            <JFXButton fx:id="saveBtn" layoutX="481.0" layoutY="155.0" onAction="#onActionSave" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Save" textFill="#fcfcfc">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
             </JFXButton>
-            <TextField id="search_txtField" fx:id="txtSearch" layoutX="16.0" layoutY="15.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="374.0" promptText="Search Room Id" styleClass="search_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField id="search_txtField" fx:id="txtSearch" layoutX="16.0" layoutY="15.0" prefHeight="40.0" prefWidth="374.0" promptText="Search Room Id" styleClass="search_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -86,10 +86,10 @@
             </JFXButton>
             <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="407.0" layoutY="17.0">
                <image>
-                  <Image url="@../../../../../../Downloads/HenHouse%202%20(2)/HenHouse%202/HenHouse/HenHouse/src/main/resources/image/search.png" />
+                  <Image url="@../assets/search.png" />
                </image>
             </ImageView>
-            <TextField fx:id="txtSearch1" layoutX="17.0" layoutY="90.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="126.0" promptText="T001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField fx:id="txtId" layoutX="17.0" layoutY="90.0" prefHeight="40.0" prefWidth="126.0" promptText="T001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -104,12 +104,12 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="txtSearch111" layoutX="469.0" layoutY="89.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="264.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+            <TextField fx:id="txtContact" layoutX="469.0" layoutY="89.0" prefHeight="40.0" prefWidth="264.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="txtSearch112" layoutX="759.0" layoutY="89.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="110.0" promptText="Kalutara" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" text="Kalutara">
+            <TextField fx:id="txtQty" layoutX="759.0" layoutY="89.0" prefHeight="40.0" prefWidth="110.0" promptText="Kalutara" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font>
@@ -121,13 +121,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <TableView fx:id="tblCustomer" layoutX="24.0" layoutY="355.0" prefHeight="322.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
+      <TableView layoutX="24.0" layoutY="355.0" prefHeight="322.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
          <columns>
-            <TableColumn fx:id="colCustomerId" prefWidth="147.90758895874023" text="Id" />
-            <TableColumn fx:id="colCustomerName" prefWidth="215.06674194335938" text="Type" />
-            <TableColumn fx:id="colTelephone" prefWidth="197.22592163085938" text="Contact" />
-            <TableColumn fx:id="colAddress" prefWidth="156.02166748046875" text="Total Qty" />
-            <TableColumn fx:id="colAddress1" prefWidth="163.7198486328125" text="Available Qty" />
+            <TableColumn prefWidth="147.90758895874023" text="Id" />
+            <TableColumn prefWidth="215.06674194335938" text="Type" />
+            <TableColumn prefWidth="249.22592163085938" text="Contact" />
+            <TableColumn prefWidth="267.2738037109375" text="Total Qty" />
          </columns>
          <styleClass>
             <String fx:value="table-cell" />

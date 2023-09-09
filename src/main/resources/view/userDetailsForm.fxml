@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="505.0" prefWidth="301.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDetailsController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #171821;">
+         <children>
+            <Label layoutX="112.0" layoutY="5.0" text="User Details" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="277.0" layoutY="3.0" onMouseClicked="#onMouseClick">
+               <image>
+                  <Image url="@../assets/exit.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="33.0" prefHeight="42.0" prefWidth="274.0" style="-fx-background-color: #ececec; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="47.0" layoutY="-1.0" prefHeight="49.0" prefWidth="199.0" style="-fx-background-radius: 5; -fx-background-color: #ececec; -fx-alignment: center;" stylesheets="@../styles/dashboardFormStyles.css" text="My Profile" textFill="#15161fcb">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="31.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="41.0" fitWidth="42.0" layoutX="45.0" layoutY="2.0">
+               <image>
+                  <Image url="@../assets/working.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="110.0" layoutY="91.0" onMouseClicked="#onClickedChangeDp">
+         <image>
+            <Image url="@../assets/add-user.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtName" layoutX="16.0" layoutY="191.0" prefHeight="40.0" prefWidth="274.0" promptText="Nimna Kaveesha" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="21.0" layoutY="168.0" prefHeight="20.0" prefWidth="98.0" text="Name">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="14.0" layoutY="263.0" prefHeight="40.0" prefWidth="274.0" promptText="nimnaKaveesha123456@gmail.com" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="19.0" layoutY="240.0" prefHeight="20.0" prefWidth="98.0" text="Email">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="15.0" layoutY="334.0" prefHeight="40.0" prefWidth="274.0" promptText="NimnaKs2001" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="20.0" layoutY="311.0" prefHeight="20.0" prefWidth="98.0" text="Username">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="14.0" layoutY="404.0" prefHeight="40.0" prefWidth="274.0" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css" />
+      <Label layoutX="15.0" layoutY="382.0" prefHeight="20.0" prefWidth="98.0" text="Password">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="updateBtn" buttonType="RAISED" layoutX="13.0" layoutY="459.0" onAction="#onActionUpdate" prefHeight="25.0" prefWidth="274.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Update Details" textFill="#fcfcfc">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

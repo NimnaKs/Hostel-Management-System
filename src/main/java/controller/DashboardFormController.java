@@ -5,13 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,28 +24,77 @@ public class DashboardFormController implements Initializable {
     private AnchorPane root;
 
     @FXML
+    private AnchorPane root1;
+
+    @FXML
     private Label title_bar;
 
     @FXML
-    private JFXButton dashboard;
+    private JFXButton dashboardBtn;
 
     @FXML
-    private JFXButton dashboard1;
+    private JFXButton roomsBtn;
 
     @FXML
-    private JFXButton dashboard11;
+    private JFXButton tenantsBtn;
 
     @FXML
-    private JFXButton dashboard111;
+    private JFXButton reservationBtn;
 
     @FXML
-    private JFXButton dashboard1111;
+    private JFXButton userDetailsBtn;
 
     @FXML
-    private JFXButton dashboard11111;
+    private JFXButton signOutBtn;
+
+    private AnchorPane anchorPane;
+
+    private double xOffset = 0;
+    private double yOffset = 0;
 
     @FXML
-    private BarChart<String, Number> barChart;
+    void onActionClickDashBoard(ActionEvent event) throws IOException {
+        setForms("/view/dashboardFormControllerPanel.fxml");
+    }
+
+    @FXML
+    void onActionClickRoom(ActionEvent event) throws IOException {
+        setForms("/view/roomForm.fxml");
+    }
+
+    @FXML
+    void onActionClickSignOut(ActionEvent event) throws IOException {
+        AnchorPane anchorPane1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/loginForm.fxml")));
+        anchorPane1.setOnMousePressed(this::handleMousePressed);
+        anchorPane1.setOnMouseDragged(this::handleMouseDragged);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(anchorPane1));
+        Stage stage1 = (Stage) root.getScene().getWindow();
+        stage1.close();
+        stage.show();
+    }
+
+    @FXML
+    void onActionClickTenants(ActionEvent event) throws IOException {
+        setForms("/view/tenantsForm.fxml");
+    }
+
+    @FXML
+    void onActionReservation(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onActionUserDetails(ActionEvent event) throws IOException {
+        AnchorPane anchorPane1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/userDetailsForm.fxml")));
+        anchorPane1.setOnMousePressed(this::handleMousePressed);
+        anchorPane1.setOnMouseDragged(this::handleMouseDragged);
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(anchorPane1));
+        stage.show();
+    }
 
     @FXML
     void onMouseClick(MouseEvent event) throws IOException {
@@ -56,24 +105,43 @@ public class DashboardFormController implements Initializable {
         stage.hide();
     }
 
+    public void setForms(String forms) throws IOException {
+
+        String[] formsArray = {"/view/dashboardFormControllerPanel.fxml","/view/roomForm.fxml","/view/tenantsForm.fxml"};
+
+        JFXButton[] btnArray = {dashboardBtn,roomsBtn,tenantsBtn};
+
+        anchorPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(forms)));
+        root1.getChildren().clear();
+        root1.getChildren().add(anchorPane);
+
+        for (int i = 0; i < formsArray.length; i++) {
+
+            btnArray[i].setStyle("-fx-background-color:  #ececec");
+
+            if (forms.equals(formsArray[i])) {
+                btnArray[i].setStyle("-fx-background-color: #8dc6ff");
+            }
+        }
+    }
+
+    private void handleMousePressed(MouseEvent event) {
+        xOffset = event.getSceneX();
+        yOffset = event.getSceneY();
+    }
+
+    private void handleMouseDragged(MouseEvent event) {
+        Stage primaryStage = (Stage) ((Parent) event.getSource()).getScene().getWindow();
+        primaryStage.setX(event.getScreenX() - xOffset);
+        primaryStage.setY(event.getScreenY() - yOffset);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Create data series
-        XYChart.Series<String, Number> series = new XYChart.Series<>();
-        series.getData().add(new XYChart.Data<>("January", 5000));
-        series.getData().add(new XYChart.Data<>("February", 6000));
-        series.getData().add(new XYChart.Data<>("March", 7500));
-        series.getData().add(new XYChart.Data<>("April", 8500));
-        series.getData().add(new XYChart.Data<>("June", 500));
-        series.getData().add(new XYChart.Data<>("July", 3500));
-        series.getData().add(new XYChart.Data<>("August", 750));
-        series.getData().add(new XYChart.Data<>("September", 1500));
-        series.getData().add(new XYChart.Data<>("October", 2500));
-        series.getData().add(new XYChart.Data<>("November", 6500));
-        series.getData().add(new XYChart.Data<>("December", 7500));
-        // Add more data for other months
-
-        // Add series to the chart
-        barChart.getData().add(series);
+        try {
+            setForms("/view/dashboardFormControllerPanel.fxml");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

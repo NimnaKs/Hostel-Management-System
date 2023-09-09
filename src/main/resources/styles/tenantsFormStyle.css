@@ -13,11 +13,17 @@
     -fx-border-color: #000000FF;
     -fx-prompt-text-fill: #000000FF;
     -fx-underline: false;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
 }
 
 .gender_combobox{
     -fx-border-color: #000000FF;
     -fx-border-radius: 8px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
 }
 
 .table-view .column-header-background{
@@ -39,6 +45,7 @@
 .table-view .table-cell{
     -fx-text-fill: black;
     -fx-font-weight: bold;
+    -fx-font-family: Arial;
     -fx-alignment: center;
     -fx-background-color: transparent;
     -fx-border-color: transparent;

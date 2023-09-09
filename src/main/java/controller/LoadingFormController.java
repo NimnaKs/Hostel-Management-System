@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class loadingFormController implements Initializable {
+public class LoadingFormController implements Initializable {
 
     @FXML
     private AnchorPane root;

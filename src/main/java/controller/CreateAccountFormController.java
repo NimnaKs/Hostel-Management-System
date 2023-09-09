@@ -15,7 +15,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Objects;
 
-public class createAccountFormController {
+public class CreateAccountFormController {
 
     @FXML
     private AnchorPane root;
