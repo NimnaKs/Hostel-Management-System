@@ -1,8 +1,6 @@
 package Bo;
 
-import Bo.custom.impl.RoomBOImpl;
-import Bo.custom.impl.TenantsBOImpl;
-import Bo.custom.impl.UserBOImpl;
+import Bo.custom.impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -12,7 +10,7 @@ public class BOFactory {
         return (boFactory == null) ? boFactory = new BOFactory() : boFactory;
     }
     public enum BOTypes {
-        TENANTS,ROOMS,USER
+        TENANTS,ROOMS,USER,RESERVATION,QUERY
     }
     public SuperBO getBO(BOTypes types){
         switch (types) {
@@ -22,6 +20,10 @@ public class BOFactory {
                 return new RoomBOImpl();
             case USER:
                 return new UserBOImpl();
+            case RESERVATION:
+                return new ReservationBOImpl();
+            case QUERY:
+                return new QueryBOImpl();
             default:
                 return null;
         }

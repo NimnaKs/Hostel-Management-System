@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoomDto implements SuperDto {
+public class RoomDto {
     private String room_type_id;
     private String type;
     private Double key_money;

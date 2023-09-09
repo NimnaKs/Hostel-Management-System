@@ -19,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 
-public class Room implements SuperEntity {
+public class Room {
 
     @Id
     private String room_type_id;

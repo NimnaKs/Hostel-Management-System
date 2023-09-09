@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" focusTraversable="true" prefHeight="700.0" prefWidth="928.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservationFormController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="28.0" prefHeight="80.0" prefWidth="903.0" style="-fx-background-color: #ececec; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="611.0" layoutY="10.0">
+               <image>
+                  <Image url="@../assets/man.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="61.0" layoutY="9.0" prefHeight="63.0" prefWidth="284.0" style="-fx-background-radius: 5; -fx-background-color: #ececec; -fx-alignment: center;" stylesheets="@../styles/dashboardFormStyles.css" text="Reservation" textFill="#15161fcb">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="60.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="682.0" layoutY="8.0" prefHeight="63.0" prefWidth="201.0" style="-fx-background-radius: 5; -fx-background-color: #ececec;" stylesheets="@../styles/dashboardFormStyles.css" text="Nimna Kaveesha">
+               <font>
+                  <Font name="Apple LiGothic Medium" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="33.0" layoutY="44.0">
+         <image>
+            <Image url="@../assets/landlord.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="root1" layoutX="22.0" layoutY="126.0" prefHeight="276.0" prefWidth="890.0" style="-fx-background-color: #f2f4f7; -fx-background-radius: 20;" stylesheets="@../styles/dashboardFormStyles.css">
+         <styleClass>
+            <String fx:value="chart-bar" />
+            <String fx:value="chart-content" />
+         </styleClass>
+         <children>
+            <TextField fx:id="txtName" layoutX="224.0" layoutY="88.0" prefHeight="40.0" prefWidth="236.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="17.0" layoutY="146.0" prefHeight="20.0" prefWidth="98.0" text="Available Qty">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="11.0" layoutY="235.0" onAction="#onActionDelete" prefHeight="37.0" prefWidth="255.0" style="-fx-background-color: #F45050; -fx-background-radius: 8;" text="Delete" textFill="#fffdfd">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="payNowBtn" buttonType="RAISED" layoutX="596.0" layoutY="235.0" onAction="#onActionPayNow" prefHeight="37.0" prefWidth="255.0" style="-fx-background-color: #3C486B; -fx-background-radius: 8;" text="Pay Now" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <TextField id="search_txtField" fx:id="txtSearch" layoutX="16.0" layoutY="15.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="374.0" promptText="Search Reservation Id" styleClass="search_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#02a8c4" />
+               </effect>
+            </TextField>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="389.0" layoutY="12.0" onAction="#btnSearchOnAction" prefHeight="42.5" prefWidth="65.0" style="-fx-background-color: #5585b5;" text="." textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#b51313" />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="407.0" layoutY="17.0">
+               <image>
+                  <Image url="@../assets/search.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="18.0" layoutY="68.0" prefHeight="20.0" prefWidth="81.0" text="Tenant ID">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="225.0" layoutY="65.0" prefHeight="20.0" prefWidth="98.0" text="Name">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox id="gender_combobox" fx:id="tenantIdCmb" layoutX="16.0" layoutY="90.0" onAction="#onActionSetTenantDetails" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: white;" styleClass="gender_combobox" stylesheets="@../styles/tenantsFormStyle.css" />
+            <TextField fx:id="availableQty" layoutX="15.0" layoutY="168.0" prefHeight="40.0" prefWidth="184.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="488.0" layoutY="65.0" prefHeight="20.0" prefWidth="98.0" text="Room ID">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox id="gender_combobox" fx:id="roomIdCmb" layoutX="485.0" layoutY="86.0" onAction="#onActionSetRoomDetails" prefHeight="40.0" prefWidth="181.0" style="-fx-background-color: white;" styleClass="gender_combobox" stylesheets="@../styles/tenantsFormStyle.css" />
+            <Label layoutX="690.0" layoutY="62.0" prefHeight="20.0" prefWidth="98.0" text="Type">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtType" layoutX="688.0" layoutY="85.0" prefHeight="40.0" prefWidth="179.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="224.0" layoutY="144.0" prefHeight="20.0" prefWidth="98.0" text="Book Date">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtDate" layoutX="224.0" layoutY="167.0" prefHeight="40.0" prefWidth="233.0" style="-fx-background-color: white; -fx-border-radius: 8;" styleClass="datepicker" stylesheets="@../styles/tenantsFormStyle.css" />
+            <Label layoutX="479.0" layoutY="142.0" prefHeight="20.0" prefWidth="98.0" text="Key Money">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="keyMoney" layoutX="478.0" layoutY="167.0" prefHeight="40.0" prefWidth="203.0" style="-fx-background-radius: 8;" styleClass="input_txtField" stylesheets="@../styles/tenantsFormStyle.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="699.0" layoutY="143.0" prefHeight="20.0" prefWidth="114.0" text="Paying Status">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="payingStatusBtn" buttonType="RAISED" layoutX="697.0" layoutY="169.0" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: Red; -fx-background-radius: 8;" text="Not Complete" textFill="#fffdfd">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bookNowBtn" buttonType="RAISED" layoutX="304.0" layoutY="236.0" onAction="#onActionBookNow" prefHeight="37.0" prefWidth="255.0" style="-fx-background-color: #FFC107; -fx-background-radius: 8;" text="Book Now" textFill="#fffdfd">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutX="573.0" layoutY="15.0" prefHeight="34.0" prefWidth="293.0" style="-fx-background-color: #53a8b6; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="24.0" prefHeight="34.0" prefWidth="152.0" style="-fx-alignment: center;" text="Reservation ID " textFill="#171821">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservationId" layoutX="170.0" prefHeight="34.0" prefWidth="98.0" style="-fx-alignment: center;" text="R001" textFill="#171821">
+                     <font>
+                        <Font name="Apple LiGothic Medium" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblReservation" layoutX="20.0" layoutY="430.0" prefHeight="250.0" prefWidth="890.0" stylesheets="@../styles/tenantsFormStyle.css">
+         <columns>
+            <TableColumn fx:id="colReservationId" prefWidth="149.44275093078613" text="Reservation ID" />
+            <TableColumn fx:id="colTenantId" prefWidth="162.55723571777344" text="Tenant ID" />
+            <TableColumn fx:id="colRoomId" prefWidth="170.7412109375" text="Room ID" />
+            <TableColumn fx:id="colDate" prefWidth="194.56289672851562" text="Book Date" />
+            <TableColumn fx:id="colPayingStatus" prefWidth="200.11444091796875" text="Paying Status" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>

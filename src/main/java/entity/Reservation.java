@@ -15,7 +15,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Reservation implements SuperEntity {
+public class Reservation {
     @Id
     private String res_id;
     private Date date;

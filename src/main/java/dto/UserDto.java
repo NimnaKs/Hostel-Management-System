@@ -1,8 +1,6 @@
 package dto;
 
-import com.mysql.cj.jdbc.Blob;
 import jakarta.persistence.Column;
-import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +10,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class UserDto implements SuperDto {
+public class UserDto {
     private String id;
     private String password;
     private String name;

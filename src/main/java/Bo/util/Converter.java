@@ -1,7 +1,9 @@
 package Bo.util;
 
+import dto.ReservationDto;
 import dto.RoomDto;
 import dto.TenantDto;
+import entity.Reservation;
 import entity.Room;
 import entity.Tenant;
 
@@ -15,15 +17,6 @@ public class Converter {
     public static Converter getInstance() {
         return converter == null ? converter = new Converter() : converter;
     }
-
-    /*public UserDto toUserDto(User entity) {
-        return new UserDto(entity.getId(), entity.getPassword(), entity.getPasswordHint());
-    }
-
-    public User toUserEntity(UserDto dto) {
-        return new User(dto.getId(), dto.getPassword(), dto.getPasswordHint());
-    }*/
-
     public TenantDto toTenantDto(Tenant student) {
         TenantDto tenantDto = new TenantDto();
         tenantDto.setStudent_id(student.getStudent_id());
@@ -64,11 +57,10 @@ public class Converter {
         return entity;
     }
 
-    /*public Reservation toReservationEntity(ReservationDto dto) {
-        System.out.println(dto);
+    public Reservation toReservationEntity(ReservationDto dto) {
         Reservation entity = new Reservation();
         entity.setRes_id(dto.getRes_id());
-        entity.setStudent(toStudentEntity(dto.getStudentDto()));
+        entity.setTenant(toTenantEntity(dto.getTenantDto()));
         entity.setRoom(toRoomEntity(dto.getRoomDto()));
         entity.setDate(dto.getDate());
         entity.setStatus(dto.getStatus());
@@ -78,10 +70,10 @@ public class Converter {
     public ReservationDto toReservationDto(Reservation entity) {
         ReservationDto dto = new ReservationDto();
         dto.setRes_id(entity.getRes_id());
-        dto.setStudentDto(toStudentDto(entity.getStudent()));
+        dto.setTenantDto(toTenantDto(entity.getTenant()));
         dto.setRoomDto(toRoomDto(entity.getRoom()));
         dto.setDate(entity.getDate());
         dto.setStatus(entity.getStatus());
         return dto;
-    }*/
+    }
 }

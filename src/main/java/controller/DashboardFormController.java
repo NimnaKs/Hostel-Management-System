@@ -81,8 +81,8 @@ public class DashboardFormController implements Initializable {
     }
 
     @FXML
-    void onActionReservation(ActionEvent event) {
-
+    void onActionReservation(ActionEvent event) throws IOException {
+        setForms("/view/reservationForm.fxml");
     }
 
     @FXML
@@ -107,9 +107,9 @@ public class DashboardFormController implements Initializable {
 
     public void setForms(String forms) throws IOException {
 
-        String[] formsArray = {"/view/dashboardFormControllerPanel.fxml","/view/roomForm.fxml","/view/tenantsForm.fxml"};
+        String[] formsArray = {"/view/dashboardFormControllerPanel.fxml","/view/roomForm.fxml","/view/tenantsForm.fxml","/view/reservationForm.fxml"};
 
-        JFXButton[] btnArray = {dashboardBtn,roomsBtn,tenantsBtn};
+        JFXButton[] btnArray = {dashboardBtn,roomsBtn,tenantsBtn,reservationBtn};
 
         anchorPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(forms)));
         root1.getChildren().clear();

@@ -13,7 +13,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ReservationDto implements SuperDto {
+public class ReservationDto {
     private String res_id;
     private Date date;
     private String status;

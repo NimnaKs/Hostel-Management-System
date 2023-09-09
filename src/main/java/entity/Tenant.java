@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Tenant implements SuperEntity {
+public class Tenant {
     @Id
     private  String student_id;
     private String name;

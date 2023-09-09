@@ -12,6 +12,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReservationTm {
+
     private String res_id;
     private Date date;
     private String status;
